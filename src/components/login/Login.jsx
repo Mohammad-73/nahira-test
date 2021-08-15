@@ -18,9 +18,13 @@ export default function Login() {
 
   const { userEmail, userPass } = loginValue;
 
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
+
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <h2>{user}</h2>
         <input
           value={userEmail}
