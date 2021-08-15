@@ -1,11 +1,16 @@
 import React from "react";
-import store from "../../store";
+
+import { useSelector, useDispatch } from "react-redux";
+import userActions from "../../store/user/user.actions";
 
 export default function Login() {
+  const user = useSelector((state) => state.user);
+
   return (
     <div>
-      <button onClick={() => store.dispatch({ type: "login" })}>login</button>
-      <button onClick={() => store.dispatch({ type: "logout" })}>logout</button>
+      <h2>{user}</h2>
+      <button onClick={() => userActions.login()}>login</button>
+      <button onClick={() => userActions.logout()}>logout</button>
     </div>
   );
 }

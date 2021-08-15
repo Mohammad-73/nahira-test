@@ -1,20 +1,18 @@
-export function login() {
+import { bindActionCreators } from "redux";
+import store from "../index";
+function login() {
   return {
     type: "login",
     payload: "mohammad",
   };
 }
 
-export function logout() {
+function logout() {
   return {
     type: "logout",
   };
 }
 
-export function reset() {
-  return (dispatch) => {
-    setTimeout(() => {
-      dispatch({ type: "reset" });
-    }, 1000);
-  };
-}
+const userActions = bindActionCreators({ login, logout }, store.dispatch);
+
+export default userActions;
