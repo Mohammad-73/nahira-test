@@ -1,0 +1,70 @@
+.rootLogin {
+  position: relative;
+  .valid {
+    color: #8cff40;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px #000000;
+  }
+  .invalid {
+    color: #ff7f29;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px #000000;
+  }
+
+  .loginForm {
+    border: 3px solid #6555fa;
+    background-color: #6555fa;
+    border-radius: 10px;
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    outline: none !important;
+  }
+
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0 4px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color: #8cff40;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+
+  .container {
+    padding: 16px;
+  }
+
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .loginForm {
+    width: 80% !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  .loginForm {
+    width: 95% !important;
+  }
+}
