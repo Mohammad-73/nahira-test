@@ -1,9 +1,9 @@
 import { bindActionCreators } from "redux";
 import store from "../index";
-function login() {
+function login(userEmail, userPass) {
   return {
     type: "login",
-    payload: "mohammad",
+    payload: [userEmail, userPass],
   };
 }
 

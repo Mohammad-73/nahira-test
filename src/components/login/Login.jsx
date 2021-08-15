@@ -16,24 +16,28 @@ export default function Login() {
     setLoginValue({ ...loginValue, [name]: value });
   }
 
+  const { userEmail, userPass } = loginValue;
+
   return (
     <div>
       <form>
         <h2>{user}</h2>
         <input
-          value={loginValue.userEmail}
+          value={userEmail}
           name="userEmail"
           onChange={handleChange}
           type="email"
         />
         <input
-          value={loginValue.userPass}
+          value={userPass}
           name="userPass"
           onChange={handleChange}
           type="password"
         />
         {loginValue.userEmail}
-        <button onClick={() => userActions.login()}>login</button>
+        <button onClick={() => userActions.login(userEmail, userPass)}>
+          login
+        </button>
         <button onClick={() => userActions.logout()}>logout</button>
       </form>
     </div>
